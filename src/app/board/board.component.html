@@ -1,16 +1,17 @@
+<thead>
 <div class="h3">Othello Board Game</div>
-<div class="area" appMovableArea>
-  <div class="space"></div>
-  <div class="space"></div>
-  <div class="space"></div>
-  <div class="space"></div>
-  <div class="space"></div>
-  <div class="space"></div>
-  <div class="space"></div>
-  <div class="space"></div>
+<div class="area" id="area1" appMovableArea >
+  <div class="space" appMovable *ngFor="let spc of spaces">
+
+  </div>
+</div>
+</thead>
+
+<tbody>
+<div class="div">
+  <button (click)="add()">New Chip</button>
   <div class="box" appMovable *ngFor="let trapped of trappedBoxes">
     {{trapped}}
   </div>
 </div>
-
-<button (click)="add()">New Chip</button>
+</tbody>
